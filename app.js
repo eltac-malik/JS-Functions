@@ -130,3 +130,167 @@
 // FUNCTIONS
 // OBJECTS
 // ARRAY
+
+
+//        14.01.2023
+
+
+// //CLOSURE
+// let test = 6;
+// function outVar (a) {
+//     let x = 5;
+//     return function (b){
+//         let x2=6
+//     // PURE FUNCTION
+//         return function (c) {
+//             return a+b+c+x2+test
+//         }
+//     }
+// }
+
+// //  CURRYING
+//  console.log(outVar(3)(4)(1))
+
+
+// FUNCTION LOOP -> RECURSIVE FUNCTION
+
+// function countDown(fromNumber) {
+//   console.log(fromNumber);
+
+//   if (fromNumber - 1 > 0) {
+//     countDown(fromNumber - 1);
+//   }
+// }
+// countDown(10);
+
+
+// function countDown(param) {
+//   console.log(param);
+//   param++;
+
+//   if (param <= 10) {
+//     countDown(param);
+//   }
+// }
+
+// countDown(5);
+
+
+// 1 1 2 3 5 8 13 21 34 55 ...
+
+// let x = 0;
+// let y = 1;
+
+// function Fibonacci (limit) {
+//         console.log(x)
+//         let sum = x+y;
+//         x=y;
+//         y=sum
+//     if(x<limit) {
+//         Fibonacci(limit)
+//     }
+// }
+
+// Fibonacci(100);
+
+//  CALLBACK FUNCTION
+
+// function x(y) {
+//     return y
+// }
+
+// function sayHello() {
+//     console.log('salam');
+// }
+
+// console.log(x(sayHello()));
+
+//  HIGHER ORDER FUNCTION
+
+// DAXILINE CALLBACK QEBUL EDEN FUNKSIYALAR
+
+// function x(a,b,c) {
+//     return a+b+c
+// }
+
+// // CALLBACK FUNCTION
+// function sum(z) {
+//     return z
+// }
+// console.log(x(1,2,sum(5)))
+
+
+// NESTED FUNCTION
+// CLOSURE
+// HIGHER ORDER FUNCTION
+
+// let Exception = function(typer)
+// {
+//     return 'sehv type value daxil etmissiniz'
+// }
+
+// function x(a,b,callback=Exception) {
+//     return callback(a,b); 
+// }
+
+// function sum (d,e) {
+//     return d+e
+// }
+
+// //console.log(x(3,2,sum))
+// console.log(x(3,2,sum))
+
+
+
+
+
+
+
+
+
+// OBJECTS
+
+
+// let Imran = {
+//   name: "Imran",
+//   surname: "Hatefi",
+//   age: 250,
+//   colorList: {
+//     white: "#fff",
+//     black: "#000",
+//   },
+//   experience: [
+//     {
+//       company: "Pashabank",
+//       duration: 2,
+//       position: "Full stack Developer",
+//       stack: "Java , React",
+//       previlege: "Senior",
+//     },
+//     {
+//       company: "Mcdonalds",
+//       duration: 1.5,
+//       position: "Frontend Architech",
+//       stack: "React",
+//       previlege: "Senior",
+//     }
+//   ],
+//   aboutInfo:function() {
+//     return `About : ${this.name} ${this.surname}`
+//   },
+//   totalExp:function(){
+//     let total = 0;
+//     for (let i = 0; i < this.experience.length; i++){
+//         total = total + this.experience[i].duration
+//     }
+//     return `Total experience : ${total}`;
+//   }
+// };
+
+// console.log(Imran.totalExp());
+
+// // DOT NOTATION
+// console.log(Imran.surname);
+
+// // OBJECT LITERAL
+// console.log(Imran['surname']);
