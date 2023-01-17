@@ -294,3 +294,158 @@
 
 // // OBJECT LITERAL
 // console.log(Imran['surname']);
+
+
+
+
+
+
+
+// -------------------------- 17.01.2023 --------------------------
+
+// function letterCounter(word, letter) {
+//   let count = 0;
+//   for (let i = 0; i < word.length; i++) {
+//     if (word.charAt(i).toLowerCase() === letter.toLowerCase()) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(letterCounter("zErengul", "E"));
+
+//  TASK
+
+//   1) User promtla sifarisi yazacaq
+//   fri/mcdonalds/2
+//   fri , burger , twister
+//   mcdonalds , kfc , burger king
+//   fri / 3 / 5 / 1
+//   DONT USE IF
+//   
+//   1) user sifaris daxil edir
+//   2) restoran teyin olunur sirafisi qebul edir
+//   3) kuryer sifarisi qebul etmelidir
+//
+
+
+// //let arr = ["imran",'seyid',2,{name:"eltac"},true,null]
+// let x = [3,43,5,6,]
+
+// // PUSH , POP , SHIFT , UNSIFT
+
+// // ADD LAST
+// x.push(3);
+
+// // DELETE LAST
+// x.pop();
+
+// // ADD FIRST
+// x.unshift('ali')
+
+// // DELETE FIRST
+// x.shift()
+
+// console.log(x)
+
+// DESTRUCTION
+/*let x = [1,2,'imran','ali']
+// let salam = x[2]
+let [ferid,salam,z,ali] = x*/
+
+// REST OPERATOR
+/*let x = ['salam',2,4,56,true,null]
+let [ilk,imran,...newArr] = x;
+let [...newArr,ilk,imran] = x; bele olmaz
+console.log(newArr)*/
+
+ // SPREAD OPERATOR
+/*  let x = [2,4,true,null];
+  let y = ['ali','sahin',...x]
+  console.log(x)
+  console.log(y)*/
+
+// slice
+/*let x = [1,2,4,87,12,3]
+console.log(x.slice(5,2))*/
+
+//splice
+
+// At position 2, add 2 elements: 
+/*const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 2, "Lemon", "Kiwi")
+console.log(fruits)*/
+
+// SORT
+//let x = [2,11,3,1,5,10]
+//console.log(x.sort())
+/*x.sort((a,b)=> a-b)
+console.log(x)*/
+/*let x = ['a','baba','alma']
+console.log(x.sort())*/
+
+// REVERSE
+/*let x = [2,3,4,5]
+console.log(x.reverse())*/
+
+// FIND
+/*let x = [1,'a',2,4,'salam',4];
+let y = x.find((e)=>{
+    return e===4
+})
+console.log(y)*/
+
+// FILTER
+// let x = [1,'a',2,4,'salam',4];
+// let y = x.filter((e)=> {
+//     return e===4
+// })
+// ARROW FUNCTION
+// IMPILICTID RETURN
+// let y = x.filter(e=> e===4)
+// console.log(y)
+
+// FOREACH
+// don't create new array
+/*let x = [1,2,3,4,5];
+x.forEach(e=>{console.log(e)})*/
+
+// MAP
+// create new array
+/*let x = [1,2,3,4,5];
+let y = x.map(e => e*200);
+console.log(y)*/
+
+/*let x = [1,2,3,4,5];
+let y = x.map(e=>{
+    return e+"a"
+})
+console.log(y)*/
+
+// JOIN
+/*let x = ['a','l','m','a'];
+console.log(x.join(""))*/
+
+// CONCAT
+/*let x = [1,2,3];
+let y = [5,6];
+let c = x.concat(y)
+console.log(c)*/
+
+
+/*let x = [1,'sala',2];
+
+let y = x.map(e=>{
+    if(typeof e == 'string') {
+        return e+"m"
+    }
+    return e
+})
+
+console.log(y)*/
+
+
+
+
+
