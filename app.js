@@ -447,5 +447,150 @@ console.log(y)*/
 
 
 
+// HOMEWORK
+
+//let arr = [1,2,3,4,5]
+//let emptyArr = []
+
+// arr.forEach(e => emptyArr.push(e));
+// console.log(emptyArr);
+
+// const newArrMap = arr.map(e=> e);
+// console.log(newArrMap);
+
+// let empArr = [];
+// for (let i = 0; i < arr.length; i++) {
+//     empArr.push(arr[i])
+// }
+// console.log(empArr)
+
+// let newArr = [...arr]
+// console.log(newArr)
+
+// let newArr = JSON.parse(JSON.stringify(arr))
+// console.log(newArr)
+
+// let x = Array.from(arr)
+// console.log(x)
+
+// -----------------------------
+// const arr=[1,5,10,-5,-3,0,8,81,92]
+// arr.sort(function(a,b){
+//     return b-a 
+// });
+// console.log(arr)
+
+
+// const arr = [1, 5, 10, -5, -3, 0, 8, 81];
+// let a =[];
+// for (let i = 0; i< arr.length; i++) {
+//     for (let j = i+1; j < arr.length; j++) {    
+//         if (arr[i]>arr[j]) {
+//             let x = arr[i];
+//             arr[i]= arr[j];
+//             arr[j]=x;        
+//         }      
+//     }
+//     }
+// console.log(arr);
+
+
+// let x = [1,2,3,4,5]
+// let delArrEl = (array = [], element) => {
+//   return array.filter((item) => item !== element);
+// };
+// console.log(delArrEl(x,2))
+
+// let x = [1, 2, 3, 4, 5];
+// x[100] = "Zamir"
+// console.log(x[35])
+
+//let x = [1,3,5,7,9]
+// let sum = 0
+// x.forEach(item => sum+=item)
+// console.log(sum);
+
+// let y = x.reduce((vusal,a)=> vusal+a,5)
+// console.log(y)
+
+// let x = [1,3,5]
+// let y = x.reduce((sum, e, i)=> sum+e+i,0);
+// console.log(y)
+
+
+// OBJECT
+
+// let ali = {
+//     name:"Ali",
+//     surname:"Almammadov",
+//     age:33,
+//     1:"salam"
+// }
+
+// delete ali["1"];
+// console.log(ali)
+
+
+//  DOT NOTAION
+// console.log(ali.name);
+
+// OBJECT LITERAL
+// console.log(ali['name']);
+
+// console.log(Object.keys(ali))
+// console.log(Object.values(ali));
+// console.log(Object.entries(ali))
+
+// let obj1 = {
+//     name:"Eziz",
+//     surname:"Kerimov"
+// }
+// let obj2;
+//obj2 = obj1;
+
+// 1
+//obj2 = {...obj1}
+// 2
+//obj2 = JSON.parse(JSON.stringify(obj1))
+//console.log(obj1)
+//console.log(obj2)
+
+// let links = {
+//     facebook:"FACEBOOK",
+//     intagram:"INSTAGRAM",
+//     twitter:"TWITTER"
+// }
+
+// let x = (x)=>{
+//     return links[x] ? links[x] : "salam"
+// }
+
+// let z = 'twittersakfuhsd'
+// console.log(x(z));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
