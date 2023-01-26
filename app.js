@@ -569,28 +569,146 @@ console.log(y)*/
 // console.log(x(z));
 
 
+//   26.01.2023
+
+
+// let x = 'eltacmalik';
+// let y = {};
+// let arr = x.split("");
+
+// arr.forEach(i=>{
+//     {y[i] = (y[i]||0)+1}
+// })
+// console.log(y)
+
+
+// Groups anagram
+//let x = ['eat','tea','tae','ate','bat']
+// [['eat,'tea','tan','ate'],'bat']
+
+// FUNCTIONAL CONSTRUCTOR
+// function Person(_name,_surname){
+//     this.name = _name; 
+//     this.surname = _surname
+// }
+/*let vusal = new Person("Vusal","Valiyev")
+let eltac = new Person("Eltac","Malik")
+console.log(vusal)
+console.log(eltac)*/
+
+// let User = function (firstName, lastName, email) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.email = email;
+// }
+
+// let UserBuilder = function () {
+
+//     let firstName;
+//     let lastName;
+//     let email;
+//     return {
+//         setFirstName: function (firstName) {
+//             this.firstName = firstName;
+//             return this;
+//         },
+//         setLastName: function (lastName) {
+//             this.lastName = lastName;
+//             return this;
+//         },
+//         setEmail: function (email) {
+//             this.email = email;
+//             return this;
+//         },
+//         info: function () {
+//             return `${this.firstName} ${this.lastName}, ${this.email}`;
+//         },
+//         build: function () {
+//             return new User(this.firstName, this.lastName, this.email);
+//         }
+//     };
+// };
+
+// var user = new UserBuilder().setFirstName('Eshgin').setLastName('Farzali').setEmail('eshqinferzeliyev@gmail.com');
+// console.log(user.build());
 
 
 
+//   class Person {
+//     constructor(name, surname, age) {
+//       this.name = name;
+//       this.surname = surname;
+//       this.age = age;
+//     }
+//     showFullInfo() {
+//       return this;
+//     }
+//   }
+
+//   let imran = new Person("Imran", "Hatefi", 25);
+
+//   console.log(imran.showFullInfo());
+
+// class Person {
+//   constructor(name, surname, age) {
+//     this.name = name;
+//     this.surname = surname;
+//     this.age = age;
+//   }
+// }
+
+// class Student extends Person {
+//   constructor(name, surname, age, education) {
+//     super(name, surname, age);
+//     this.education = education;
+//   }
+// }
+
+// let ferid = new Person("Ferid", "Zamanli", 25);
+// let imranMuellim = new Student("ADNSU", "Imran", "Hatefi", 25);
+// console.log(imranMuellim);
+// console.log(ferid);
+
+
+// class Person {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   static salam() {
+//     return "salam Vusal";
+//   }
+// }
+
+// class Customer extends Person {
+//   constructor(name, exp) {
+//     super(name);
+//     this.exprerience = exp;
+//   }
+// }
+
+// let eltac = new Customer("eltac", 2);
+// console.log(eltac.salam());
 
 
 
+/*function sayHello(greet, msg) {
+  console.log(`${greet} ${this.name}  ${msg}`);
+}
+
+let obj = {
+    name:"WEB 3.1"
+}*/
+// sayHello.call(obj,"X","Y");
+// sayHello.apply(obj,["X","Y"])
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// function whoCantListenLesson(){
+//     console.log(`${this.name} / ${this.surname}`)
+// }
+// let person = {
+//     name:"Eshgin",
+//     surname:"Farzaliyev"
+// }
+// let x = whoCantListenLesson.bind(person)
+// x()
