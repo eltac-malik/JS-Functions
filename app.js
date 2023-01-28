@@ -230,7 +230,7 @@
 // }
 
 // function x(a,b,callback=Exception) {
-//     return callback(a,b); 
+//     return callback(a,b);
 // }
 
 // function sum (d,e) {
@@ -323,7 +323,7 @@
 //   mcdonalds , kfc , burger king
 //   fri / 3 / 5 / 1
 //   DONT USE IF
-//   
+//
 //   1) user sifaris daxil edir
 //   2) restoran teyin olunur sirafisi qebul edir
 //   3) kuryer sifarisi qebul etmelidir
@@ -372,7 +372,7 @@ console.log(x.slice(5,2))*/
 
 //splice
 
-// At position 2, add 2 elements: 
+// At position 2, add 2 elements:
 /*const fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.splice(2, 2, "Lemon", "Kiwi")
 console.log(fruits)*/
@@ -476,7 +476,7 @@ console.log(y)*/
 // -----------------------------
 // const arr=[1,5,10,-5,-3,0,8,81,92]
 // arr.sort(function(a,b){
-//     return b-a 
+//     return b-a
 // });
 // console.log(arr)
 
@@ -484,12 +484,12 @@ console.log(y)*/
 // const arr = [1, 5, 10, -5, -3, 0, 8, 81];
 // let a =[];
 // for (let i = 0; i< arr.length; i++) {
-//     for (let j = i+1; j < arr.length; j++) {    
+//     for (let j = i+1; j < arr.length; j++) {
 //         if (arr[i]>arr[j]) {
 //             let x = arr[i];
 //             arr[i]= arr[j];
-//             arr[j]=x;        
-//         }      
+//             arr[j]=x;
+//         }
 //     }
 //     }
 // console.log(arr);
@@ -588,7 +588,7 @@ console.log(y)*/
 
 // FUNCTIONAL CONSTRUCTOR
 // function Person(_name,_surname){
-//     this.name = _name; 
+//     this.name = _name;
 //     this.surname = _surname
 // }
 /*let vusal = new Person("Vusal","Valiyev")
@@ -712,3 +712,101 @@ let obj = {
 // }
 // let x = whoCantListenLesson.bind(person)
 // x()
+
+
+// 28.01.2023
+
+// class Web {
+//     constructor(name, count, regPrice) {
+//         this.name = name;
+//         this.count = count;
+//         this.sum = regPrice
+//     }
+
+//     createTeacher(tname, tsurname) {
+//         this.tname = tname;
+//         this.tsurname = tsurname
+//         return { tname, tsurname, group: this.name, count: this.count }
+//     }
+
+//     createStudent(stuName) {
+//         return {
+//             name: stuName,
+//             group: this.name,
+//             teacher: `${this.tname} / ${this.tsurname}`
+//         }
+//     }
+
+// }
+
+// let ceo = new Web('3.1', 20, 40000);
+// let teacher1 = ceo.createTeacher("Imran", 'Hatefi')
+// let stu1 = ceo.createStudent("Sahin")
+// console.log(stu1)
+
+
+// 1) STEP 1
+
+// ANBAR :-> ADI , G-QIYMETI , S-QIYMETI , CATEGORY , SUPPLIER
+// FILIAL:-> ADI , S-QIYMETI , CATEGORY , F-QIYMETI
+
+// class Owner {
+//     constructor(name,surname){
+//         this.name = name,
+//         this.surname = surname
+//     }
+
+//     branch(bname, bAddress){
+//         return {
+//             branchName:bname,
+//             branchAddress: bAddress,
+//             owner: `${this.name} ${this.surname}`
+//         }
+//     }
+
+// }
+// class Product extends Owner {
+//     constructor(pname,pcost,sprice,category,supplier,name,surname){
+//         super(name,surname);
+//         this.pname = pname;
+//         this.pcost = pcost;
+//         this.sprice = sprice;
+//         this.category = category;
+//         this.supplier = supplier;
+//     }
+//     newProd (){
+//         return {
+//             name:this.name,
+//             surname:this
+//         }
+//     }
+// }
+
+// let imran = new Owner("Imran",'Hatefi');
+
+// let alma = new Product('alma', 1, 2, 'fruit', 'agac', imran.name, imran.surname)
+// console.log()
+
+// let x = {name:'imran',age:1};
+
+// localStorage.setItem("salam", JSON.stringify(x))
+
+// localStorage.removeItem('salam')
+
+// let arr = [
+//     { name: '1' },
+//     { name: '2' },
+//     { name: '3' },
+//     { name: '4' }
+// ]
+
+// if ((JSON.parse(localStorage.getItem('vusal')))===null) {
+//     localStorage.setItem('vusal',JSON.stringify(arr))
+// }
+
+// let y = JSON.parse(localStorage.getItem('vusal'))
+// let newArr = y.filter(e=> e.name !== '2')
+// localStorage.setItem('vusal', JSON.stringify(newArr))
+
+// let x = JSON.parse(localStorage.getItem('vusal'))
+// console.log(x)
