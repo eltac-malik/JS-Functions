@@ -810,3 +810,178 @@ let obj = {
 
 // let x = JSON.parse(localStorage.getItem('vusal'))
 // console.log(x)
+
+
+//let eshgin = document.getElementsByClassName("div1");
+
+// let dividers = document.getElementsByClassName("div1")
+
+ //let dividers = document.querySelectorAll('.div1')
+
+ //console.log(dividers);
+
+// let imran = document.getElementById('imran')
+
+// let imran = document.querySelector('#imran')
+
+// imran.style.color='blue'
+
+// let x = document.getElementsByTagName("div")
+
+// console.log(x);
+
+// HTML collection
+// Node list
+
+// let imran = document.getElementById('imran')
+
+// imran.addEventListener("click",()=>{
+//     console.log("salam imran")
+// })
+
+// let change = document.getElementById("mode");
+// let body = document.getElementsByTagName("body")[0];
+//let reset = document.getElementById("reset")
+
+// change.addEventListener("click",()=>{
+//     body.style.background = "red"
+// })
+
+// reset.addEventListener("click", () => {
+//     body.style.background = 'black'
+//     body.style.color='white'
+// })
+
+// change.addEventListener("toggle",()=>{
+//     console.log('asflkjklshdf');
+// })
+
+// let div1 = document.getElementsByTagName("div")
+
+// let pElement = document.createElement("p")
+// pElement.textContent = 'sdavjhdkjbkdshfksjdahfkasjdhfkjahkjfh'
+
+// div1.append(pElement)
+
+
+// TODO LIST
+
+let input = document.getElementById('input')
+let btn = document.getElementById("btn")
+let lists = document.getElementById('list-box')
+
+// btn.addEventListener("click",()=>{
+//    let listElement = document.createElement("li")
+//     listElement.textContent = input.value
+//     lists.append(listElement);
+//     input.value = ""
+// })  
+
+if (JSON.parse(localStorage.getItem('list')) === null) {
+    localStorage.setItem("list",JSON.stringify([]))
+}
+
+
+
+
+btn.addEventListener("click",()=>{
+    let getList = JSON.parse(localStorage.getItem('list'))
+    let newObj = { id: Math.random(), data : input.value };
+    localStorage.setItem('list', JSON.stringify([...getList,newObj]))
+
+    let listArr = JSON.parse(localStorage.getItem("list"))
+    lists.innerHTML = ''
+    
+    listArr.reverse().forEach(e=>{
+        let listElement = document.createElement("li")
+        listElement.textContent = e.data;
+        let icon = document.createElement("i")
+        icon.className = 'fa-solid fa-xmark';
+        listElement.append(icon)
+        
+        icon.addEventListener("click",()=>{
+            
+        })
+        
+  lists.append(listElement)
+        
+        
+    })
+})
+
+function del() {
+    let filteredData = listArr.filter(item => item.id !== e.id)
+    localStorage.setItem("list", JSON.stringify(filteredData))
+}
+
+
+
+
+
+// btn.addEventListener("click",)
+
+// function write(arr){
+//         arr.reverse().forEach(e=>{
+//         let listElement = document.createElement("li")
+//         listElement.textContent = e.data;
+//         let icon = document.createElement("i")
+//         icon.className = 'fa-solid fa-xmark';
+//         listElement.append(icon)
+        
+//         icon.addEventListener("click",()=>{
+//             let filteredData = listArr.filter(item=>item.id !== e.id)
+//             localStorage.setItem("list",JSON.stringify(filteredData))
+//             let x = JSON.parse(localStorage.getItem('list'))
+//             write(x)
+//         })
+        
+//          lists.append(listElement)
+    
+//     })
+
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
