@@ -866,9 +866,9 @@ let obj = {
 
 // TODO LIST
 
-let input = document.getElementById('input')
-let btn = document.getElementById("btn")
-let lists = document.getElementById('list-box')
+// let input = document.getElementById('input')
+// let btn = document.getElementById("btn")
+// let lists = document.getElementById('list-box')
 
 // btn.addEventListener("click",()=>{
 //    let listElement = document.createElement("li")
@@ -877,42 +877,42 @@ let lists = document.getElementById('list-box')
 //     input.value = ""
 // })  
 
-if (JSON.parse(localStorage.getItem('list')) === null) {
-    localStorage.setItem("list",JSON.stringify([]))
-}
+// if (JSON.parse(localStorage.getItem('list')) === null) {
+//     localStorage.setItem("list",JSON.stringify([]))
+// }
 
 
 
 
-btn.addEventListener("click",()=>{
-    let getList = JSON.parse(localStorage.getItem('list'))
-    let newObj = { id: Math.random(), data : input.value };
-    localStorage.setItem('list', JSON.stringify([...getList,newObj]))
+// btn.addEventListener("click",()=>{
+//     let getList = JSON.parse(localStorage.getItem('list'))
+//     let newObj = { id: Math.random(), data : input.value };
+//     localStorage.setItem('list', JSON.stringify([...getList,newObj]))
 
-    let listArr = JSON.parse(localStorage.getItem("list"))
-    lists.innerHTML = ''
+//     let listArr = JSON.parse(localStorage.getItem("list"))
+//     lists.innerHTML = ''
     
-    listArr.reverse().forEach(e=>{
-        let listElement = document.createElement("li")
-        listElement.textContent = e.data;
-        let icon = document.createElement("i")
-        icon.className = 'fa-solid fa-xmark';
-        listElement.append(icon)
+//     listArr.reverse().forEach(e=>{
+//         let listElement = document.createElement("li")
+//         listElement.textContent = e.data;
+//         let icon = document.createElement("i")
+//         icon.className = 'fa-solid fa-xmark';
+//         listElement.append(icon)
         
-        icon.addEventListener("click",()=>{
+//         icon.addEventListener("click",()=>{
             
-        })
+//         })
         
-  lists.append(listElement)
+//   lists.append(listElement)
         
         
-    })
-})
+//     })
+// })
 
-function del() {
-    let filteredData = listArr.filter(item => item.id !== e.id)
-    localStorage.setItem("list", JSON.stringify(filteredData))
-}
+// function del() {
+//     let filteredData = listArr.filter(item => item.id !== e.id)
+//     localStorage.setItem("list", JSON.stringify(filteredData))
+// }
 
 
 
@@ -945,22 +945,128 @@ function del() {
 
 
 
+//let pTag = document.getElementsByTagName("p")[0]
+
+//pTag.className = 'blue';
+
+// pTag.classList.add("blue")
+
+// pTag.classList.add('orange')
+
+// pTag.classList.remove('blue')
+
+// pTag.classList.replace("orange",'oranges')
 
 
 
+//let pTag = document.getElementsByTagName("p")[1];
+
+//pTag.classList.add("salam")
+
+// pTag.classList.add("blue")
+
+// pTag.classList.add("oranges")
+
+// pTag.classList.remove("oranges")
+
+// pTag.classList.replace("blue",'oranges')
+
+
+//let newClass = document.getElementsByClassName('salam')
+
+//console.log(newClass);
+
+if (JSON.parse(localStorage.getItem("users"))===null) {
+    localStorage.setItem('users',JSON.stringify([]))
+}
+
+let username = document.getElementById('log')
+let password = document.getElementById("pass")
+let btn = document.getElementById('btn')
+let login = document.querySelector(".login")
+let register = document.querySelector(".register")
+let redReg = document.querySelector('#change-reg')
+let redLog = document.querySelector("#change-up")
+
+
+let regUser = document.getElementById('usr')
+let regPass = document.getElementById("psw")
+let name = document.getElementById("name")
+let registerBtn = document.getElementById('registerBtn')
+
+
+redReg.addEventListener('click',()=>{
+    login.style.display = 'none';
+    register.style.display = 'flex'
+})
+redLog.addEventListener("click", () => {
+    login.style.display = 'flex';
+    register.style.display = 'none'
+})
 
 
 
+// REGISTER PART
+
+registerBtn.addEventListener('click',()=>{
+    let oldUsers = JSON.parse(localStorage.getItem("users"))
+    let newPerson = {
+        name: name.value,
+        username: regUser.value,
+        password: regPass.value
+    }
+    localStorage.setItem('users',JSON.stringify([...oldUsers,newPerson]))
+})
+
+// LOGIN
+
+btn.addEventListener("click",()=>{
+    let allUsers = JSON.parse(localStorage.getItem("users"))
+
+    let currentUser = allUsers.find(item => item.password === password.value && item.username === username.value)
+    localStorage.setItem("current",JSON.stringify(currentUser))
+
+    currentUser ? window.location.href = 'user.html' : alert("SEHVDIR")
+})
+
+
+// FORGOT
+
+let forget = document.getElementById("forget")
+
+forget.addEventListener("click", () => {
+    let allUser = JSON.parse(localStorage.getItem("users"));
+    let findUser = allUser.find(e => e.username === username.value)
+
+    alert(findUser.password)
+})
 
 
 
+// CONVERT CUSTOM ENCODE
+
+function encode(){
+    let allUser = JSON.parse(localStorage.getItem('users'))
+    return allUser.map(element => {
+       return Object.entries(element).map(e=>{
+            return [e[0] = 'Esgin',e[1] = 'SALAM']
+        })
+    });
+}   
+
+let newArr = encode()
+
+function decode(){
+
+}
+
+console.log(encode())
+console.log(decode())
 
 
-
-
-
-
-
+class Coding{
+    
+}
 
 
 
