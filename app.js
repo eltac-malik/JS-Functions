@@ -976,99 +976,181 @@ let obj = {
 
 //console.log(newClass);
 
-if (JSON.parse(localStorage.getItem("users"))===null) {
-    localStorage.setItem('users',JSON.stringify([]))
-}
+// if (JSON.parse(localStorage.getItem("users"))===null) {
+//     localStorage.setItem('users',JSON.stringify([]))
+// }
 
-let username = document.getElementById('log')
-let password = document.getElementById("pass")
-let btn = document.getElementById('btn')
-let login = document.querySelector(".login")
-let register = document.querySelector(".register")
-let redReg = document.querySelector('#change-reg')
-let redLog = document.querySelector("#change-up")
-
-
-let regUser = document.getElementById('usr')
-let regPass = document.getElementById("psw")
-let name = document.getElementById("name")
-let registerBtn = document.getElementById('registerBtn')
+// let username = document.getElementById('log')
+// let password = document.getElementById("pass")
+// let btn = document.getElementById('btn')
+// let login = document.querySelector(".login")
+// let register = document.querySelector(".register")
+// let redReg = document.querySelector('#change-reg')
+// let redLog = document.querySelector("#change-up")
 
 
-redReg.addEventListener('click',()=>{
-    login.style.display = 'none';
-    register.style.display = 'flex'
-})
-redLog.addEventListener("click", () => {
-    login.style.display = 'flex';
-    register.style.display = 'none'
-})
+// let regUser = document.getElementById('usr')
+// let regPass = document.getElementById("psw")
+// let name = document.getElementById("name")
+// let registerBtn = document.getElementById('registerBtn')
+
+
+// redReg.addEventListener('click',()=>{
+//     login.style.display = 'none';
+//     register.style.display = 'flex'
+// })
+// redLog.addEventListener("click", () => {
+//     login.style.display = 'flex';
+//     register.style.display = 'none'
+// })
 
 
 
 // REGISTER PART
 
-registerBtn.addEventListener('click',()=>{
-    let oldUsers = JSON.parse(localStorage.getItem("users"))
-    let newPerson = {
-        name: name.value,
-        username: regUser.value,
-        password: regPass.value
-    }
-    localStorage.setItem('users',JSON.stringify([...oldUsers,newPerson]))
-})
+// registerBtn.addEventListener('click',()=>{
+//     let oldUsers = JSON.parse(localStorage.getItem("users"))
+//     let newPerson = {
+//         name: name.value,
+//         username: regUser.value,
+//         password: regPass.value
+//     }
+//     localStorage.setItem('users',JSON.stringify([...oldUsers,newPerson]))
+// })
 
 // LOGIN
 
-btn.addEventListener("click",()=>{
-    let allUsers = JSON.parse(localStorage.getItem("users"))
+// btn.addEventListener("click",()=>{
+//     let allUsers = JSON.parse(localStorage.getItem("users"))
 
-    let currentUser = allUsers.find(item => item.password === password.value && item.username === username.value)
-    localStorage.setItem("current",JSON.stringify(currentUser))
+//     let currentUser = allUsers.find(item => item.password === password.value && item.username === username.value)
+//     localStorage.setItem("current",JSON.stringify(currentUser))
 
-    currentUser ? window.location.href = 'user.html' : alert("SEHVDIR")
-})
+//     currentUser ? window.location.href = 'user.html' : alert("SEHVDIR")
+// })
 
 
 // FORGOT
 
-let forget = document.getElementById("forget")
+// let forget = document.getElementById("forget")
 
-forget.addEventListener("click", () => {
-    let allUser = JSON.parse(localStorage.getItem("users"));
-    let findUser = allUser.find(e => e.username === username.value)
+// forget.addEventListener("click", () => {
+//     let allUser = JSON.parse(localStorage.getItem("users"));
+//     let findUser = allUser.find(e => e.username === username.value)
 
-    alert(findUser.password)
-})
+//     alert(findUser.password)
+// })
 
 
 
 // CONVERT CUSTOM ENCODE
 
-function encode(){
-    let allUser = JSON.parse(localStorage.getItem('users'))
-    return allUser.map(element => {
-       return Object.entries(element).map(e=>{
-            return [e[0] = 'Esgin',e[1] = 'SALAM']
-        })
-    });
-}   
+// function encode(){
+//     let allUser = JSON.parse(localStorage.getItem('users'))
+//     return allUser.map(element => {
+//        return Object.entries(element).map(e=>{
+//             return [e[0] = 'Esgin',e[1] = 'SALAM']
+//         })
+//     });
+// }   
 
-let newArr = encode()
+// let newArr = encode()
 
-function decode(){
+// function decode(){
 
-}
+// }
 
-console.log(encode())
-console.log(decode())
+// console.log(encode())
+// console.log(decode())
 
 
-class Coding{
+// class Coding{
     
+// }
+
+
+
+// INNERHTML
+
+let pTag = document.getElementById('p')
+
+// pTag.innerHTML = ' ZAMIR'
+// pTag.innerHTML += ' ZAMIR'
+
+// pTag.innerHTML = `
+//     <ul>
+//     <h1>SALAM</h1>
+//     <h1>SALAM</h1>
+//     <h1>SALAM</h1>
+//     <h1>SALAM</h1>
+//     <h1>SALAM</h1>
+//     <h1>SALAM</h1>
+//     <h1>SALAM</h1>
+//     </ul>
+// `
+
+// let button = document.querySelector("#add")
+// let head2 = document.querySelector("#head2")
+
+// button.addEventListener("click",()=>{
+//     head2.innerHTML += `
+//         <p>SALAM</p>
+//     `
+// })
+
+// btn.addEventListener("click",()=>{
+
+//      ul.innerHTML += `
+//          <p>${inp.value} <span id="x">X</span></p>
+//      `
+// })
+// console.log(ul);
+
+
+let btn = document.getElementById('btn')
+let inp = document.getElementById("inp")
+let ul = document.querySelector('#ul')
+let del = document.getElementById('x')
+
+
+if(JSON.parse(localStorage.getItem("arr"))===null){
+    localStorage.setItem("arr",JSON.stringify([]))
+}
+else {
+    let arr = JSON.parse(localStorage.getItem('arr'))
+    writer(arr)
 }
 
+btn.addEventListener('click',(e)=>{
+    let arr = JSON.parse(localStorage.getItem("arr"))
+    localStorage.setItem("arr", JSON.stringify([...arr, inp.value]))
+    ul.innerHTML=''
+    let newArr = JSON.parse(localStorage.getItem("arr"))
+    writer(newArr)
+})
 
+function writer(param) {
+    param.forEach(e => {
+        ul.innerHTML += `<div class="card" style = "width: 18rem;" >
+        <div class="card-body">
+            <h5 class="card-title">${e}</h5>
+            <p class="card-text">Some quick  of the card's
+                content.</p>
+            <a  class="btn btn-primary" onClick=deleted(${`'${e}'`})>Sil</a>
+        </div>
+        </div>
+        `
+    })
+}
+
+function deleted(param) {
+    let arr = JSON.parse(localStorage.getItem('arr'))
+    let filterArr = arr.filter(e => e != `${param}`)
+    localStorage.setItem("arr", JSON.stringify(filterArr))
+    ul.innerHTML = ''
+    let newArr = JSON.parse(localStorage.getItem('arr'))
+    writer(newArr)
+}
 
 
 
